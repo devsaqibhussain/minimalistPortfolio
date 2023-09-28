@@ -12,7 +12,7 @@ import {
 import { ContactsList, HiringSites } from "@/utils/constants"
 import Link from "next/link";
 
-const homePage = () => {
+const HomePage = () => {
   const anime = React.useRef(null);
   React.useEffect(() => {
     const typed = new Typed(anime.current, {
@@ -95,4 +95,4 @@ const homePage = () => {
   );
 };
 
-export default homePage;
+export default HomePage;

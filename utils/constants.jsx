@@ -77,7 +77,7 @@ export const myStack = [
 export const ProjectDetails = [
   {
     img: "/youtubeClone.jpg",
-    desc: "A video Streaming platform inpired by youtube, uses RapidAPI to search for youtube videos and stream them with react-player.",
+    desc: "A video Streaming platform inpired by Youtube, uses RapidAPI to search for Youtube videos and stream them with React-Player.",
     title: "Youtube Clone",
     code: "https://github.com/devsaqibhussain/youtubeClone",
     live: "https://devsaqibhussain.github.io/youtubeClone/",
@@ -86,7 +86,7 @@ export const ProjectDetails = [
   {
     img: "/amazonClone.jpg",
     title: "Amazon Clone",
-    desc: 'An Ecommerce website inpired by amazon, uses Redux for state managment, has built in "Add to Card" feature and product search.',
+    desc: 'An Ecommerce website inpired by Amazon, uses Redux for state managment, has built in "Add to Card" feature and product search.',
     code: "https://github.com/devsaqibhussain/amazon",
     live: "https://devsaqibhussain.github.io/amazon/",
     labels: ["React", "TailwindCSS", "Redux"],

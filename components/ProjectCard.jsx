@@ -20,7 +20,7 @@ const ProjectCard = ({ ...props }) => {
             <Image
             src={props.img}
             width={500}
-            height={500}
+            height={300}
             className=" rounded-lg"
             />
         </div>

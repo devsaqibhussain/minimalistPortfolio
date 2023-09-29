@@ -1,5 +1,6 @@
-import {BiLogoGmail,BiLogoTelegram, BiLogoDiscordAlt} from "react-icons/bi"
-import { TbBrandUpwork, TbBrandFiverr } from 'react-icons/tb'
+import {BiLogoGmail,BiLogoTelegram, BiLogoDiscordAlt, BiLogoReact, BiLogoTailwindCss, BiLogoHtml5, BiLogoCss3, BiLogoJavascript} from "react-icons/bi"
+import { TbBrandUpwork, TbBrandFiverr, TbBrandNextjs } from 'react-icons/tb'
+
 export const NavLinks =[
     {text:"About me",href:"/aboutme",id:"aboutme"},
     {text:"Projects",href:"/project",id:"project"},
@@ -21,8 +22,16 @@ export const ContactsList=[
 //     {img:"/amazonClone.jpg",name:"Amazon Clone",code:"https://github.com/devsaqibhussain/amazon",live:"https://devsaqibhussain.github.io/amazon/"},
 //     {img:"/hooBank.jpg",name:"Landing Page",code:"https://github.com/devsaqibhussain/hooBankProject",live:"https://devsaqibhussain.github.io/hooBankProject/"},
 // ]
-// export const Certifications = [
-//     {img:"/RWD.jpg",link:"https://www.freecodecamp.org/certification/fcc7314419a-f426-466c-8a34-25969ef36192/responsive-web-design"},
-//     {img:"/DSA.jpg",link:"https://www.freecodecamp.org/certification/fcc7314419a-f426-466c-8a34-25969ef36192/javascript-algorithms-and-data-structures"},
-//     {img:"/FED.jpg",link:"https://www.freecodecamp.org/certification/fcc7314419a-f426-466c-8a34-25969ef36192/front-end-development-libraries"},
-// ]
+export const Certifications = [
+    {name:"Responsive Web Design",link:"https://www.freecodecamp.org/certification/fcc7314419a-f426-466c-8a34-25969ef36192/responsive-web-design"},
+    {name:"Data Structure and Algorithms",link:"https://www.freecodecamp.org/certification/fcc7314419a-f426-466c-8a34-25969ef36192/javascript-algorithms-and-data-structures"},
+    {name:"Frontend Developement Libraries",link:"https://www.freecodecamp.org/certification/fcc7314419a-f426-466c-8a34-25969ef36192/front-end-development-libraries"},
+]
+export const myStack = [
+    {name:"Nextjs", icon:<TbBrandNextjs/>},
+    {name:"React", icon:<BiLogoReact/>},
+    {name:"TailwindCSS", icon:<BiLogoTailwindCss/>},
+    {name:"HTML5", icon:<BiLogoHtml5/>},
+    {name:"CSS3", icon:<BiLogoCss3/>},
+    {name:"JavaScript", icon:<BiLogoJavascript/>},
+]

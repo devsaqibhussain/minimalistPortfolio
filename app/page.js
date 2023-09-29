@@ -81,6 +81,7 @@ const Page = () => {
             height={500}
             className="dark:hidden"
             alt="2d art of web developer"
+            loading="eager"
           />
           <Image
             src={"/programmer.svg"}
@@ -88,6 +89,7 @@ const Page = () => {
             height={500}
             className="hidden dark:block"
             alt="2d art of web developer"
+            loading="eager"
           />
         </div>
       </div>

@@ -17,19 +17,20 @@ const page = () => {
       </div>
       <div className=" mt-5 text-start flex flex-col justify-center items-center gap-5">
         <p className="indent-5 max-w-[1000px]">
-          Hello, I'm Saqib Hussain, a passionate Frontend Web Developer with a
-          unique journey. I made the exciting transition from a background in
-          Mechanical Engineering to the dynamic world of web development. This
-          transition has not only been a career shift but a transformation into
-          a realm where creativity, problem-solving, and innovation converge.
+          Hello, I&apos;m Saqib Hussain, a passionate Frontend Web Developer
+          with a unique journey. I made the exciting transition from a
+          background in Mechanical Engineering to the dynamic world of web
+          development. This transition has not only been a career shift but a
+          transformation into a realm where creativity, problem-solving, and
+          innovation converge.
         </p>
         <p className=" indent-5 max-w-[1000px]">
           My expertise lies in crafting exceptional user experiences using
           modern web technologies. I thrive on turning ideas into intuitive and
           visually appealing web applications. With a strong foundation in React
-          and Next.js, I bring your digital dreams to life. Whether it's
+          and Next.js, I bring your digital dreams to life. Whether it&apos;s
           building interactive web interfaces, optimizing performance, or
-          creating responsive designs, I'm up for the challenge.
+          creating responsive designs, I&apos;m up for the challenge.
         </p>
       </div>
       <div className=" text-lg font-bold text-center mt-10 underline underline-offset-8 ">
@@ -37,7 +38,12 @@ const page = () => {
       </div>
       <div className=" grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 max-w-[600px] place-items-center justify-items-center m-auto mt-5 shadow-md  rounded-xl p-10">
         {myStack.map((tech, index) => (
-          <div key={index} className={` flex flex-col justify-center items-center animate-pulse delay-[${index*100}ms]`}>
+          <div
+            key={index}
+            className={` flex flex-col justify-center items-center animate-pulse delay-[${
+              index * 100
+            }ms]`}
+          >
             <p className=" text-4xl">{tech.icon}</p>
             <p>{tech.name}</p>
           </div>
@@ -65,13 +71,13 @@ const page = () => {
             <AccordionContent>
               <p className="ml-4">
                 I did my Bachelor of Science (Bsc) in Mechanical Engineering
-                from{" "}
+                from
                 <a
                   href="https://www.uet.edu.pk/"
                   target="_blank"
                   className="underline underline-offset-1 inline-flex gap-2 items-center"
                 >
-                  University of Engineering and Technology, Lahore{" "}
+                  University of Engineering and Technology, Lahore
                   <ExternalLinkIcon />
                 </a>
               </p>

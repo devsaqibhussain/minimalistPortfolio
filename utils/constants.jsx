@@ -1,6 +1,6 @@
 import {
   BiLogoGmail,
-  BiLogoWhatsapp,
+  BiPhoneCall,
   BiLogoTelegram,
   BiLogoDiscordAlt,
   BiLogoReact,
@@ -8,6 +8,7 @@ import {
   BiLogoHtml5,
   BiLogoCss3,
   BiLogoJavascript,
+  BiCopy,
 } from "react-icons/bi";
 import { TbBrandUpwork, TbBrandFiverr, TbBrandNextjs } from "react-icons/tb";
 
@@ -49,13 +50,15 @@ export const ContactsList = [
     id: "telegram",
     icon: <BiLogoTelegram />,
   },
-  {
-    name: "Telegram",
-    href: "tel:+9230918797",
-    id: "whatsapp",
-    icon: <BiLogoWhatsapp/>,
-  },
 ];
+export const phoneNumber={
+    name: "Phone",
+    href: "tel:+923091879755",
+    number: "+923091879755",
+    id: "phone",
+    icon: <BiPhoneCall/>,
+    copy: <BiCopy/>
+  }
 
 export const Certifications = [
   {

@@ -1,5 +1,6 @@
 import {
   BiLogoGmail,
+  BiLogoWhatsapp,
   BiLogoTelegram,
   BiLogoDiscordAlt,
   BiLogoReact,
@@ -47,6 +48,12 @@ export const ContactsList = [
     href: "https://t.me/devsaqib",
     id: "telegram",
     icon: <BiLogoTelegram />,
+  },
+  {
+    name: "Telegram",
+    href: "tel:+9230918797",
+    id: "whatsapp",
+    icon: <BiLogoWhatsapp/>,
   },
 ];
 

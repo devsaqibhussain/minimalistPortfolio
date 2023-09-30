@@ -54,7 +54,7 @@ export const ContactsList = [
 export const phoneNumber={
     name: "Phone",
     href: "tel:+923091879755",
-    number: "+923091879755",
+    number: "+92 3091879755",
     id: "phone",
     icon: <BiPhoneCall/>,
     copy: <BiCopy/>

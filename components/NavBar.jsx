@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className="text-xl font-semibold ">
           <Link href={"/"}>Dev Saqib</Link>
         </div>
-        <div className="flex items-center md:gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           <ModeToggle />
           <NavMenuToggle/>
         </div>

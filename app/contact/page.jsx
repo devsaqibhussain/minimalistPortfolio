@@ -41,7 +41,7 @@ const page = () => {
                 For casual chat and discussion.
               </CardDescription>
             </CardHeader>
-            <CardContent className="grid grid-cols-3 gap-y-4">
+            <CardContent className="grid sm:grid-cols-4 lg:grid-cols-3 grid-cols-3 gap-y-4">
               {ContactsList.map((contact) => (
                 <div
                   className="flex flex-col justify-center items-center gap-2"
@@ -66,11 +66,11 @@ const page = () => {
                   <DialogHeader>
                     <DialogTitle>My Phone Number</DialogTitle>
                     <DialogDescription>
-                      Use phone icon if using mobile, otherwise use copy button.
+                      Note: Use <span className="font-semibold">phone</span> button if using <span className="font-semibold">mobile</span>, otherwise use <span className="font-semibold">copy </span> button.
                     </DialogDescription>
                   </DialogHeader>
                   <div className=" flex gap-2 items-center">
-                    <Label>Phone Number:</Label>
+                    <Label className="font-bold">Phone Number:</Label>
                     {phoneNumber.number}
                     <Button
                       onClick={() => {
@@ -84,7 +84,6 @@ const page = () => {
                           Text copied to clipboard.
                         </PopoverContent>
                       </Popover>
-                      
                     </Button>
                     <Link href={phoneNumber.href}>
                       <Button variant="outline">{phoneNumber.icon}</Button>
@@ -94,7 +93,7 @@ const page = () => {
               </Dialog>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="w-full">
             <CardHeader>
               <CardTitle className="m-auto">Hire Me Here</CardTitle>
               <CardDescription className="text-wrap text-center italic">
@@ -102,7 +101,7 @@ const page = () => {
                 these links.
               </CardDescription>
             </CardHeader>
-            <CardContent className="grid grid-cols-3 gap-y-4">
+            <CardContent className="grid sm:grid-cols-4 lg:grid-cols-3 grid-cols-3 gap-y-4">
               {HiringSites.map((hire) => (
                 <div
                   className="flex flex-col justify-center items-center gap-2"

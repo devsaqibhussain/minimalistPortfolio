@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="mt-10">
       <div className=" text-lg font-bold text-center mt-20 mb-10 underline underline-offset-8 ">
-        Projects
+        PROJECTS
       </div>
       <Tabs defaultValue="frontend" className="w-full">
         <TabsList className="grid w-full grid-cols-3">

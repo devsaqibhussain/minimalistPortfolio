@@ -22,6 +22,7 @@ const ProjectCard = ({ ...props }) => {
             width={500}
             height={300}
             className=" rounded-lg"
+            alt="project image"
             />
         </div>
         <CardHeader>

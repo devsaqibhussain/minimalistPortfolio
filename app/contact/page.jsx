@@ -120,7 +120,7 @@ const page = () => {
         <Card className="flex-1 flex-grow">
           <CardHeader>
             <CardTitle className="m-auto">Email Form</CardTitle>
-            <CardDescription className=" italic">
+            <CardDescription className=" italic text-center">
               Only for business queries
             </CardDescription>
           </CardHeader>

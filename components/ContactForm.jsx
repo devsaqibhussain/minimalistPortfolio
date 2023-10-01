@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-
+import { ReloadIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -16,13 +16,28 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { sendContactForm } from "@/utils/sendContactForm";
 
+// Form Schema ---------------------------------
 
 const formSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
+  body: z.string().min(50, {
+    message: "Message must be at least 30 characters.",
+  }),
+  subject: z
+    .string()
+    .min(3, {
+      message: "Subject must be at least 3 characters.",
+    })
+    .max(50, { message: "Must be 50 or fewer characters long" }),
+  email: z.string().email({ message: "Invalid email address" }),
 });
+
+// Function Starts here --------------------------
 
 const ContactForm = () => {
   const form = useForm({
@@ -31,11 +46,13 @@ const ContactForm = () => {
       username: "",
     },
   });
-  function onSubmit(values) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = (values) => {
+    setIsLoading(() => true);
+    sendContactForm(values);
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -81,7 +98,7 @@ const ContactForm = () => {
                 <Input placeholder="e.g. Personal Website Project" {...field} />
               </FormControl>
               <FormDescription>
-                Enter the Subject, what your email is about. 
+                Enter the Subject, what your email is about.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -94,17 +111,29 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Details</FormLabel>
               <FormControl>
-                <Textarea placeholder="e.g. I would like a fully customizable portfolio built using Nextjs and TailwindCSS." {...field}/>
+                <Textarea
+                  placeholder="e.g. I would like a fully customizable portfolio built using Nextjs and TailwindCSS."
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
-                Enter the Details, about the Project / Job. 
+                Enter the Details, about the Project / Job.
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type="submit">Submit</Button>
+        {isLoading ? (
+          <Button type="submit" disabled>
+            <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+            Please Wait
+          </Button>
+        ) : (
+          <Button type="submit">
+            Submit
+          </Button>
+        )}
       </form>
     </Form>
   );

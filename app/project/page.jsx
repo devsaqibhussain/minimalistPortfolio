@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "@/components/ProjectCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { ProjectDetails } from "@/utils/constants";
 const page = () => {
   return (
@@ -14,7 +15,7 @@ const page = () => {
           <TabsTrigger value="backend">Backend</TabsTrigger>
           <TabsTrigger value="native">Native</TabsTrigger>
         </TabsList>
-        <div className=" bg-stone-100 dark:bg-stone-800 dark:text-stone-400 rounded-md p-2 sm:p-4 pt-1 sm:pt-2 mt-2">
+        <ScrollArea className=" bg-stone-100 dark:bg-stone-800 dark:text-stone-400 rounded-md p-2 sm:p-4 pt-1 sm:pt-2 mt-2 h-[70vh] sm:h-[76vh] lg:h-auto">
           <TabsContent
             value="frontend"
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center "
@@ -33,7 +34,7 @@ const page = () => {
           </TabsContent>
           <TabsContent value="backend">Coming Soon...</TabsContent>
           <TabsContent value="native">Coming Soon...</TabsContent>
-        </div>
+        </ScrollArea>
       </Tabs>
     </div>
   );

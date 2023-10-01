@@ -2,6 +2,7 @@ import './globals.css'
 import { inter } from './font'
 import { ThemeProvider } from "@/components/theme-provider"
 import NavBar from '@/components/NavBar'
+import { Toaster } from "@/components/ui/toaster"
 
 
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <div className='py-12 container'>
             {children}
           </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

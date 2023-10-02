@@ -18,6 +18,8 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { sendContactForm } from "@/utils/sendContactForm";
+import { useToast } from "@/components/ui/use-toast"
+
 
 // Form Schema ---------------------------------
 
@@ -46,12 +48,29 @@ const ContactForm = () => {
       username: "",
     },
   });
+  const { toast } = useToast()
 
   const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState("Send Email");
 
   const onSubmit = async (values) => {
     setIsLoading(() => true);
-    await sendContactForm(values);
+    try {
+      await sendContactForm(values);
+      setIsLoading(()=>false)
+      setStatus("Email Sent")
+      toast({
+        title: "Email sent successfully.",
+        description: "You will be reached out soon by our team.",
+      })
+    } catch(error) {
+     setIsLoading(()=>false)
+     setStatus("Try Other Services")
+     toast({
+      title: "Unable to send Email.",
+      description: "Try reaching out on other links provided, Thanks.",
+    })
+    }
   };
   return (
     <Form {...form}>
@@ -125,15 +144,13 @@ const ContactForm = () => {
         />
 
         {isLoading ? (
-          <Button type="submit" >
+          <Button type="submit" disabled>
             <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
             Please Wait
           </Button>
-        ) : (
-          <Button type="submit">
-            Submit
-          </Button>
-        )}
+        ) : status =="Send Email"?
+          <Button type="submit">{status}</Button>:<Button type="submit" disabled>{status}</Button>
+        }
       </form>
     </Form>
   );

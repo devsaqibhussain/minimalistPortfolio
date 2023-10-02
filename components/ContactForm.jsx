@@ -49,9 +49,9 @@ const ContactForm = () => {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     setIsLoading(() => true);
-    sendContactForm(values);
+    await sendContactForm(values);
   };
   return (
     <Form {...form}>
@@ -125,7 +125,7 @@ const ContactForm = () => {
         />
 
         {isLoading ? (
-          <Button type="submit" disabled>
+          <Button type="submit" >
             <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
             Please Wait
           </Button>

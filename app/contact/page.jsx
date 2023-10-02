@@ -66,7 +66,10 @@ const page = () => {
                   <DialogHeader>
                     <DialogTitle>My Phone Number</DialogTitle>
                     <DialogDescription>
-                      Note: Use <span className="font-semibold">phone</span> button if using <span className="font-semibold">mobile</span>, otherwise use <span className="font-semibold">copy </span> button.
+                      Note: Use <span className="font-semibold">phone</span>{" "}
+                      button if using{" "}
+                      <span className="font-semibold">mobile</span>, otherwise
+                      use <span className="font-semibold">copy </span> button.
                     </DialogDescription>
                   </DialogHeader>
                   <div className=" flex gap-2 items-center">

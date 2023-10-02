@@ -1,3 +1,4 @@
+export const BaseURL = "https://devsaqib.vercel.app"
 import {
   BiLogoGmail,
   BiPhoneCall,

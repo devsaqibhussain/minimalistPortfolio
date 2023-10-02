@@ -2,14 +2,14 @@
 import React from "react";
 import Typed from "typed.js";
 import Image from "next/image";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { ContactsList, HiringSites } from "@/utils/constants"
+} from "@/components/ui/dropdown-menu";
+import { ContactsList, HiringSites } from "@/utils/constants";
 import Link from "next/link";
 
 const Page = () => {
@@ -49,11 +49,18 @@ const Page = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                { HiringSites.map((site)=>(
-                <DropdownMenuItem key={site.id}>
-                <Link href={site.href} target="_blank"className="flex items-center gap-2">{site.icon}{site.name}</Link>
-                </DropdownMenuItem>
-                )) }
+                {HiringSites.map((site) => (
+                  <DropdownMenuItem key={site.id}>
+                    <Link
+                      href={site.href}
+                      target="_blank"
+                      className="flex items-center gap-2"
+                    >
+                      {site.icon}
+                      {site.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -64,11 +71,18 @@ const Page = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-              { ContactsList.map((contact)=>(
-                <DropdownMenuItem key={contact.id}>
-                <Link href={contact.href} target="_blank" className="flex items-center gap-2">{contact.icon}{contact.name}</Link>
-                </DropdownMenuItem>
-                )) }
+                {ContactsList.map((contact) => (
+                  <DropdownMenuItem key={contact.id}>
+                    <Link
+                      href={contact.href}
+                      target="_blank"
+                      className="flex items-center gap-2"
+                    >
+                      {contact.icon}
+                      {contact.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

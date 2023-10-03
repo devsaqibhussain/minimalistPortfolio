@@ -15,7 +15,7 @@ const page = () => {
           <TabsTrigger value="backend">Backend</TabsTrigger>
           <TabsTrigger value="native">Native</TabsTrigger>
         </TabsList>
-        <ScrollArea className=" bg-stone-100 dark:bg-stone-800 dark:text-stone-400 rounded-md p-2 sm:p-4 pt-1 sm:pt-2 mt-2 h-[70vh] sm:h-[76vh] lg:h-auto">
+        <ScrollArea className=" bg-stone-100 dark:bg-stone-800 dark:text-stone-400 rounded-md p-2 sm:p-4 pt-1 sm:pt-2 mt-2 h-[70vh] sm:h-[76vh] lg:h-[70vh]">
           <TabsContent
             value="frontend"
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center "

@@ -110,4 +110,20 @@ export const ProjectDetails = [
     live: "https://devsaqibhussain.github.io/hooBankProject/",
     labels: ["React", "TailwindCSS", "Figma"],
   },
+  {
+    img: "/portfolioOne.jpg",
+    title: "Portfolio 1.0",
+    desc: "My first portfolio that I created using react.",
+    code: "https://github.com/devsaqibhussain/portfolio",
+    live: "https://devsaqibhussain.github.io/portfolio/",
+    labels: ["React", "TailwindCSS", "Framer Motion"],
+  },
+  {
+    img: "/portfolioTwo.jpg",
+    title: "Portfolio 2.0",
+    desc: "My second portfolio that I made using Next JS",
+    code: "https://github.com/devsaqibhussain/my-portfolio",
+    live: "https://portfolio-2-jade-pi.vercel.app/",
+    labels: ["React","Next JS", "TailwindCSS", "Framer Motion"],
+  },
 ];

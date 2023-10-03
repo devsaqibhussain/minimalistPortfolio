@@ -33,7 +33,7 @@ const ProjectCard = ({ ...props }) => {
         </CardHeader>
         <CardContent className="flex flex-col sm:flex-row w-fit gap-2">
           <Link href={props.live} target="_blank">
-            <Button variant="customOutline" className="flex gap-2">
+            <Button variant="customOutline" className="flex gap-2 whitespace-nowrap">
               <DesktopIcon/>
               Live Site
             </Button>

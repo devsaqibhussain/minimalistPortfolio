@@ -65,11 +65,16 @@ const page = () => {
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle className="text-center">My Whatsapp</DialogTitle>
+                    <DialogTitle className="text-center">
+                      My Whatsapp
+                    </DialogTitle>
                     <DialogDescription>
-                     <p className="text-center">Scan <span className="font-semibold">QR Code</span>{" "}
-                      or click 
-                      <span className="font-semibold">"Message me"</span> to directly start the conversation.</p>
+                      <p className="text-center">
+                        Scan <span className="font-semibold">QR Code </span> 
+                        or click
+                        <span className="font-semibold"> Message me</span> to
+                        directly start the conversation.
+                      </p>
                     </DialogDescription>
                   </DialogHeader>
                   <div className=" flex flex-col gap-2 items-center">
@@ -77,14 +82,16 @@ const page = () => {
                       src={phoneNumber.qr}
                       width={200}
                       height={200}
-                      alt="whatsapp's qr code"
+                      alt="whatsapp qr code"
                       className="p-1 bg-white rounded-md"
                     />
                     <Label className="font-thin ">Scan QR Code</Label>
                     <Label className="font-bold my-3">OR</Label>
-                    
+
                     <Link href={phoneNumber.href} target="_blank">
-                      <Button variant="outline" className=" flex gap-2">{phoneNumber.icon} Message Me</Button>
+                      <Button variant="outline" className=" flex gap-2">
+                        {phoneNumber.icon} Message Me
+                      </Button>
                     </Link>
                   </div>
                 </DialogContent>

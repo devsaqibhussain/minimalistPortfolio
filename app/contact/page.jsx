@@ -25,6 +25,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { ContactsList, HiringSites, phoneNumber } from "@/utils/constants";
 import Link from "next/link";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -64,32 +65,26 @@ const page = () => {
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>My Phone Number</DialogTitle>
+                    <DialogTitle className="text-center">My Whatsapp</DialogTitle>
                     <DialogDescription>
-                      Note: Use <span className="font-semibold">phone</span>{" "}
-                      button if using{" "}
-                      <span className="font-semibold">mobile</span>, otherwise
-                      use <span className="font-semibold">copy </span> button.
+                     <p className="text-center">Scan <span className="font-semibold">QR Code</span>{" "}
+                      or click 
+                      <span className="font-semibold">"Message me"</span> to directly start the conversation.</p>
                     </DialogDescription>
                   </DialogHeader>
-                  <div className=" flex gap-2 items-center">
-                    <Label className="font-bold">Phone Number:</Label>
-                    {phoneNumber.number}
-                    <Button
-                      onClick={() => {
-                        navigator.clipboard.writeText(phoneNumber.number);
-                      }}
-                      variant="outline"
-                    >
-                      <Popover>
-                        <PopoverTrigger>{phoneNumber.copy}</PopoverTrigger>
-                        <PopoverContent>
-                          Text copied to clipboard.
-                        </PopoverContent>
-                      </Popover>
-                    </Button>
-                    <Link href={phoneNumber.href}>
-                      <Button variant="outline">{phoneNumber.icon}</Button>
+                  <div className=" flex flex-col gap-2 items-center">
+                    <Image
+                      src={phoneNumber.qr}
+                      width={200}
+                      height={200}
+                      alt="whatsapp's qr code"
+                      className="p-1 bg-white rounded-md"
+                    />
+                    <Label className="font-thin ">Scan QR Code</Label>
+                    <Label className="font-bold my-3">OR</Label>
+                    
+                    <Link href={phoneNumber.href} target="_blank">
+                      <Button variant="outline" className=" flex gap-2">{phoneNumber.icon} Message Me</Button>
                     </Link>
                   </div>
                 </DialogContent>

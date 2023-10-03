@@ -11,7 +11,7 @@ import {
   BiLogoJavascript,
   BiCopy,
 } from "react-icons/bi";
-import { TbBrandUpwork, TbBrandFiverr, TbBrandNextjs } from "react-icons/tb";
+import { TbBrandUpwork, TbBrandFiverr, TbBrandNextjs, TbBrandWhatsapp } from "react-icons/tb";
 
 export const NavLinks = [
   { text: "About me", href: "/aboutme", id: "aboutme" },
@@ -53,12 +53,12 @@ export const ContactsList = [
   },
 ];
 export const phoneNumber={
-    name: "Phone",
-    href: "tel:+923091879755",
+    name: "Whatsapp",
+    href: "https://wa.me/message/4TWVYUTD5JFBN1",
     number: "+92 3091879755",
     id: "phone",
-    icon: <BiPhoneCall/>,
-    copy: <BiCopy/>
+    icon: <TbBrandWhatsapp/>,
+    qr: "/whatsappQR.jpg"
   }
 
 export const Certifications = [

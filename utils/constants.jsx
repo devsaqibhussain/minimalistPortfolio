@@ -1,4 +1,4 @@
-export const BaseURL = "https://devsaqib.vercel.app"
+export const BaseURL = "https://devsaqib.vercel.app";
 import {
   BiLogoGmail,
   BiPhoneCall,
@@ -11,7 +11,12 @@ import {
   BiLogoJavascript,
   BiCopy,
 } from "react-icons/bi";
-import { TbBrandUpwork, TbBrandFiverr, TbBrandNextjs, TbBrandWhatsapp } from "react-icons/tb";
+import {
+  TbBrandUpwork,
+  TbBrandFiverr,
+  TbBrandNextjs,
+  TbBrandWhatsapp,
+} from "react-icons/tb";
 
 export const NavLinks = [
   { text: "About me", href: "/aboutme", id: "aboutme" },
@@ -52,14 +57,14 @@ export const ContactsList = [
     icon: <BiLogoTelegram />,
   },
 ];
-export const phoneNumber={
-    name: "Whatsapp",
-    href: "https://wa.me/message/4TWVYUTD5JFBN1",
-    number: "+92 3091879755",
-    id: "phone",
-    icon: <TbBrandWhatsapp/>,
-    qr: "/whatsappQR.jpg"
-  }
+export const phoneNumber = {
+  name: "Whatsapp",
+  href: "https://wa.me/message/7O7KT6FWVVOHO1",
+  number: "+92 3091879755",
+  id: "phone",
+  icon: <TbBrandWhatsapp />,
+  qr: "/whatsappQR.jpg",
+};
 
 export const Certifications = [
   {
@@ -124,6 +129,6 @@ export const ProjectDetails = [
     desc: "My second portfolio that I made using Next JS",
     code: "https://github.com/devsaqibhussain/my-portfolio",
     live: "https://portfolio-2-jade-pi.vercel.app/",
-    labels: ["React","Next JS", "TailwindCSS", "Framer Motion"],
+    labels: ["React", "Next JS", "TailwindCSS", "Framer Motion"],
   },
 ];

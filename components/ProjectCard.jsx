@@ -16,7 +16,7 @@ const ProjectCard = ({ ...props }) => {
   return (
     <div>
       <Card className="h-full">
-        <div className="p-1">
+        <div className="p-1 relative">
           <Image
             src={props.img}
             width={500}

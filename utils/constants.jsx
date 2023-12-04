@@ -90,7 +90,7 @@ export const myStack = [
   { name: "JavaScript", icon: <BiLogoJavascript /> },
 ];
 
-export const ProjectDetails = [
+export const FrontendProjectDetails = [
   {
     img: "/youtubeClone.jpg",
     desc: "A video Streaming platform inpired by Youtube, uses RapidAPI to search for Youtube videos and stream them with React-Player.",
@@ -130,5 +130,46 @@ export const ProjectDetails = [
     code: "https://github.com/devsaqibhussain/my-portfolio",
     live: "https://portfolio-2-jade-pi.vercel.app/",
     labels: ["React", "Next JS", "TailwindCSS", "Framer Motion"],
+  },
+];
+export const BackendProjectDetails = [
+  {
+    img: "/samazon.png",
+    desc: "An Ecommerce platform with authentication, anonymous shopping cart, user shopping cart.",
+    title: "Samazon",
+    code: "https://github.com/devsaqibhussain/samazon",
+    live: "https://samazon-devsaqib.vercel.app/",
+    labels: [
+      "TypeScript",
+      "Nextjs",
+      "TailwindCSS",
+      "Prismadb",
+      "Next-Auth",
+      "DaisyUI",
+    ],
+  },
+  {
+    img: "/sai.png",
+    desc: "An AI SAAS platform with authentication, stripe payment system. Works using OPENAI API and has costumer service support.",
+    title: "S-AI",
+    code: "https://github.com/devsaqibhussain/s-ai",
+    live: "https://s-ai.vercel.app",
+    labels: [
+      "TypeScript",
+      "Nextjs",
+      "TailwindCSS",
+      "Stripe",
+      "Prismadb",
+      "Clerk",
+      "Crisp",
+    ],
+  },
+  {
+    img: "/bookstore.png",
+    desc: "A simple project where you can add books and view books added by other users. Uses REST API made by me to perform CRUD operations with database.",
+    title: "Book Database",
+    code: "https://github.com/stars/devsaqibhussain/lists/bookstore",
+    live: "https://devsaqib-bookstore.vercel.app/",
+    labels: ["MangoDB", "Nodejs", "React", "Vite", "ShadcnUI", "TailwindCSS"],
   },
 ];
